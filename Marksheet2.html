@@ -1,0 +1,35 @@
+<html>
+<head>
+<script>
+var name = prompt("Enter Your Name");
+var rollNumber =prompt("Enter Your Roll Number");
+var subject =prompt("Enter Your Subject");
+var maths =prompt("Enter your Maths marks");
+var English=prompt("Enter your English marks");
+var Hindi =prompt("Enter Your Hindi Marks");
+var Biology =prompt("Enter your Biology marks");
+var Obtained_marks=  parseInt(maths)+parseInt(English)+parseInt(Hindi)+parseInt(Biology);
+var percentage=Obtained_marks*100/500;
+document.write("Your  name is:"+name+"</br>");
+document.write("Your roll number is:"+rollNumber+"</br>");
+document.write("Your Subjects are:"+subject+"</br>");
+document.write("Your"+Obtained_marks+"</br>");
+document.write("Your score is:"+percentage+"</br>");
+
+if(percentage>=80){
+document.write("Your Grade is A-1")
+}else
+if(percentage=>60){
+document.write("Your Grade is B");
+}else if(percentage=>50){
+document.write("Your grade is C");
+}else if(percentage=>40){
+document.write("Your Grade is D");
+}else if(percentage=>30){
+document.write("Your Grade is E");
+}else {
+document.write("Your grade is Fail");
+}
+</script>
+</head>
+</html>
