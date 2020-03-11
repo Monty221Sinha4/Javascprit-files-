@@ -1,0 +1,65 @@
+<html>
+<head>
+<script>
+//help the cashier return the right of change
+
+//PProgram input
+//Amount due
+var total=prompt('Total Due:');
+
+//Amount Paid by the customer
+
+var moneyPaid=prompt('Amount Paid:');
+
+
+
+//Convert collected values to float numbers Make sure the decima parts has two digits only
+
+total =parseFloat(total).toFixed(2);
+
+moneyPaid =parseFloat(moneyPaid).toFixed(2);
+
+//Program output
+
+//Calculate the change amount .Make sure the decimal parts has two digits only
+var change =(moneyPaid-total).toFixed(2);
+
+//Print the amount due /amount paid /change
+
+
+console.log('Due: £' + total + '/ Paid: £' + moneyPaid + '/ Change: £' + change);
+
+
+//Print change breakdown: notes and coins
+//$100
+note_coin={
+
+value:100,
+name :'S 100 naotes:',
+return:0
+};
+note_coin.return=Math.floor(change/note_coin.value);
+change=(change% note_coin.value).toFixed(2);
+note_coin.return>0 ? console.log(note_coin.name + note_coin.return): 0;
+
+notes_coin={
+value:50,
+name:'S 50 notes:',
+return :0
+};
+note_coin.return=Math.floor(change/note_coin.value);
+change=(change%note_coin.value).toFixed(2);
+note_coin.return>0?console.log(note_coin.name+note_coin.return):0;
+
+note_coin={
+value:10,
+name:'S 10 notes:',
+return:0,
+};
+note_coin.return=Math.floor(change/note_coin.value);
+change=(change%note_coin.value).toFixed(2);
+note_coin.return>0?console.log(note_coin.name+note_coin.return):0;
+</script>
+
+</head>
+</html>
